@@ -60,10 +60,10 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center flex-wrap gap-6 pt-8">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group">
+            <a href="#contact" className="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group">
               Say Hello
               <FaPaperPlane className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </button>
+            </a>
             <div className="flex gap-4 text-gray-400">
               <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
                 <FaGithub size={20} />
