@@ -3,14 +3,38 @@
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(null); // Initialize as null to prevent hydration mismatch
+  const [theme, setTheme] = useState(null);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     // Run on client only
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    console.log('Initial theme set to:', savedTheme);
+    
+    // Intersection Observer for active section tracking
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -30% 0px',
+      threshold: 0,
+    };
+
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const sections = ['home', 'skills', 'qualifications', 'projects', 'contact'];
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleTheme = (e) => {
@@ -18,33 +42,30 @@ const Navbar = () => {
     e.stopPropagation();
 
     const newTheme = theme === 'dark' ? 'light' : 'dark';
-    console.log('Toggling theme from', theme, 'to', newTheme);
-
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
-  // Prevent rendering before theme is determined to avoid flash
   if (!theme) return null;
 
   const menuItems = [
     {
-      label: "Home", href: "#", icon: (
+      label: "Home", id: "home", href: "#home", icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
         </svg>
       )
     },
     {
-      label: "Tech Stack", href: "#skills", icon: (
+      label: "Tech Stack", id: "skills", href: "#skills", icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
         </svg>
       )
     },
     {
-      label: "Qualifications", href: "#qualifications", icon: (
+      label: "Qualifications", id: "qualifications", href: "#qualifications", icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 14l9-5-9-5-9 5 9 5z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
           <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
@@ -53,14 +74,14 @@ const Navbar = () => {
       )
     },
     {
-      label: "Projects", href: "#projects", icon: (
+      label: "Projects", id: "projects", href: "#projects", icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
         </svg>
       )
     },
     {
-      label: "Contact Me", href: "#contact", icon: (
+      label: "Contact Me", id: "contact", href: "#contact", icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
         </svg>
@@ -87,16 +108,16 @@ const Navbar = () => {
 
         {/* Menu Items Group (Center Pill) */}
         <div className="flex items-center gap-1 px-1 border border-[var(--border-color)] rounded-full py-1 shadow-xl bg-white/5 mx-4">
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap
-                ${index === 0
+                ${activeSection === item.id
                   ? 'bg-white/10 text-[var(--foreground)] shadow-inner'
                   : 'text-gray-400 hover:text-[var(--foreground)] hover:bg-white/5'}`}
             >
-              <span className={index === 0 ? 'text-blue-400' : 'text-gray-500'}>
+              <span className={activeSection === item.id ? 'text-blue-400' : 'text-gray-500'}>
                 {item.icon}
               </span>
               {item.label}

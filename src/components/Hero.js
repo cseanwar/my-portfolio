@@ -1,8 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
+  const roles = ["Web Developer", "Web Designer", "Problem Solver"];
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   const techIcons = [
     { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
     { name: "Next.js", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" },
@@ -14,7 +26,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden flex items-center bg-[#0b0e14]">
+    <section id="home" className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden flex items-center bg-[#0b0e14]">
       {/* Glow Effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -26,27 +38,43 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-white">
             Anwar Hossain<span className="inline-block animate-bounce ml-2">👋</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-400">
-            Full Stack <span className="text-white">Developer</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-400 flex items-center gap-2">
+            I am a
+            <div className="h-10 overflow-hidden relative inline-block min-w-[250px]">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={roles[roleIndex]}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent absolute left-0"
+                >
+                  {roles[roleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
           </h2>
           <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
             I build high-performance, beautiful, and user-friendly web applications using modern technologies like React, Node.js, and MongoDB.
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">
-              View My Work
+          <div className="flex items-center flex-wrap gap-6 pt-8">
+            <button className="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group">
+              Say Hello
+              <FaPaperPlane className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 border border-white/10 rounded-full font-bold hover:bg-white/5 text-white transition">
-              Download CV
-            </button>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex gap-6 pt-6 text-gray-400">
-            <a href="#" className="hover:text-white transition"><i className="fab fa-github text-2xl"></i></a>
-            <a href="#" className="hover:text-white transition"><i className="fab fa-linkedin text-2xl"></i></a>
-            <a href="#" className="hover:text-white transition"><i className="fab fa-twitter text-2xl"></i></a>
+            <div className="flex gap-4 text-gray-400">
+              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+                <FaGithub size={20} />
+              </a>
+              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+                <FaLinkedin size={20} />
+              </a>
+              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+                <FaTwitter size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
