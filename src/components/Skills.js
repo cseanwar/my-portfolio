@@ -1,49 +1,125 @@
 import React from 'react';
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiMongodb,
+  SiHtml5,
+  SiExpress,
+  SiMysql,
+  SiDocker,
+  SiRedhatopenshift,
+  SiGit,
+  SiMicrosoftazure
+} from 'react-icons/si';
+import { MdSecurity } from 'react-icons/md';
 
 const Skills = () => {
   const skills = [
     {
       name: "Tailwind CSS",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuBzNBY-gGuJaTAI3ne3orde__8iCvyJzReBKihNXCM38Lyqzt0CQ6Rk6rO_oBZiJKeFU5UkBjcmq4UMdvSEGhrQkxqnPRXwsEvblt9fPVeiQP_ZmFzkztK7DXzoA7rICfvwiCYJ4h4H_NSrRedYHkzXFUlwAHFD-3LWCDfx8vt3rWGJ_HqsUZH6VXMzbJQ2fKW-n9FKIwq_v5pD6Dll1Up-xtpNPVd9fBzdVDHzwV29KZn9po7htJAot-XLhO-iWk0lIqCTzCvb9g5W",
+      icon: <SiTailwindcss className="text-3xl text-blue-400" />,
       description: "Creating responsive, modern, and clean layouts quickly using utility-first styling.",
       bgColor: "bg-blue-500/10",
       hoverBg: "group-hover:bg-blue-500/20"
     },
     {
       name: "JavaScript",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuAeEEyd87ykAb5_MwcM7tpW8dFbuuD8tQnvcqFWDgYyTx-0vzJa7YdrGGsw6jhFbuifrDDWK1whriN8IqF3K4KGffabx5syIkSg0HoojDcolV9MT3g-81RtKprEWQrBysw0Weyht6ado-11QmrG7LuqlQftb5wrtsgvE7zHwuTsCTTxzWZR-zuzReEOxjowrBZb4s_-G1cvr_uxtJzST-Kc5Em98GKJyowCSmIwFlH1bAdi3153HfWFuNy87uFibNN8s1S1sq1-kUvp",
+      icon: <SiJavascript className="text-3xl text-yellow-400" />,
       description: "Writing efficient, modern, and optimized code for both frontend and backend logic.",
       bgColor: "bg-yellow-500/10",
       hoverBg: "group-hover:bg-yellow-500/20"
     },
     {
       name: "React",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuBmjKvaevL84nLY-fD2JyEuw9syq90vfWMtFX4SECPNqxCaN-n15DBr5OpdMXz-aR7ehqZI4GXFe3QRMdyFrc8FM-p4vygagYl73_pWFatb7ZiosRRAAUcP9jUt-Hoite9pdca7js5lJ_XiAXq_HCTAyuStW25fqLKGZA0Q6HksTUIMbucys2jMv0IghV2DJQxJQUQnxc7uwwj_rv4Dr3x-34ZwU5xMO8nO-BiMUDjdtAKytW08dwTaQnX8E5wdo0_KjMnoM_QATmk3",
+      icon: <SiReact className="text-3xl text-blue-300" />,
       description: "Building fast, interactive, and component-based UIs with clean state management.",
       bgColor: "bg-blue-400/10",
       hoverBg: "group-hover:bg-blue-400/20"
     },
     {
+      name: "Next.js",
+      icon: <SiNextdotjs className="text-3xl text-white" />,
+      description: "Developing powerful, SEO-friendly, and highly optimized server-side rendered React apps.",
+      bgColor: "bg-white/5",
+      hoverBg: "group-hover:bg-white/10"
+    },
+    {
       name: "Node.js",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuBADTIQk9zWzeuVLAiEgH3KVFk4w_AwSthO4dGMwpQJOAUK8zv-3QqdnlsL3-4OOgJwIzyUcSoWy_SasWda3UtbNJLRawFeoMyrSmhfXTYUBpGvu80DmTOBFCqM9zrEWo-z5JuMMbBV7ImwZpgKOdjmeAdzjcOUI3gBhDdaMksd8wBuWSUcH8RLuWoT-JH2NzyijXWbJdWeEY_3a6QcKn7wuqFmujny7rGTCHHM8FLix_-XWaZ5eFCXI20O-d11PtJ6its0N3-fLiOh",
+      icon: <SiNodedotjs className="text-3xl text-green-500" />,
       description: "Developing scalable backend logic and high-performance server-side applications.",
       bgColor: "bg-green-500/10",
       hoverBg: "group-hover:bg-green-500/20"
     },
     {
       name: "MongoDB",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvHdqMxUNuQ7FSKc33jrgwIPwuDtjITU37Zq1pBpZmh0e886lUxsqFejvRZCJRt6PT1buYYlPSHdKLQ4zSh1txjVM5Ja-B7wHPjnVu9HLlga61_M3FN6SZawLt0DFPLTvVIETzwj1bSCoTkxaV9qT5rlIhtY7O-CUdpXZM4vuRjIm2XjxQuMubjz_pE56LOZs5hEFSyekUTPn7HdTo-jtUzp8yd1aQx-OsaHcT_IEGH40XVSAdBlbfsE6m4GqvGrq8OZzdnCL2uw0T",
+      icon: <SiMongodb className="text-3xl text-green-400" />,
       description: "Managing NoSQL databases with flexible schemas for high-performance data storage.",
       bgColor: "bg-green-600/10",
       hoverBg: "group-hover:bg-green-600/20"
     },
     {
+      name: "Express.js",
+      icon: <SiExpress className="text-3xl text-gray-400" />,
+      description: "Creating robust and lightweight server-side applications and RESTful APIs.",
+      bgColor: "bg-gray-500/10",
+      hoverBg: "group-hover:bg-gray-500/20"
+    },
+    {
+      name: "Better Auth",
+      icon: (
+        <svg className="w-8 h-8 text-purple-400" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 3.39v17.22h5.783V15.06h6.434V8.939H5.783V3.39ZM12.217 8.94h5.638v6.122h-5.638v5.548H24V3.391H12.217Z" />
+        </svg>
+      ),
+      description: "Implementing secure, modern authentication and authorization for web apps.",
+      bgColor: "bg-purple-500/10",
+      hoverBg: "group-hover:bg-purple-500/20"
+    },
+    {
       name: "HTML",
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuAs_4Grdftlwt6CK-u7tyGeWKygs_CxEbVqm34yKDz_IQtOtN8fYDsud3RbJqNaTJFg0UDkt4POq19udVXgDYlRXP2WvXR2YoduF55-cqsvZ-ID7hwNTmRJaEiGRSD10_jYx-VNa0K8i3Wfd2YTD2X8YUDR0umX9IGiQOG6qw88Efhi_35hFfIntB5v9p7C3b_fIANc1YmfDJgM3wdjoKpkLLfbq3dJBXWk7oWgpdxDeNOMGZNlXvG7AEJ8e2gfex8Od48bUWOAAX4e",
+      icon: <SiHtml5 className="text-3xl text-orange-500" />,
       description: "Creating clean, well-structured page layouts with semantic markup for better SEO.",
       bgColor: "bg-orange-500/10",
       hoverBg: "group-hover:bg-orange-500/20"
-    }
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql className="text-3xl text-blue-500" />,
+      description: "Designing and managing relational databases for secure and structured data storage.",
+      bgColor: "bg-blue-600/10",
+      hoverBg: "group-hover:bg-blue-600/20"
+    },
+    {
+      name: "Docker",
+      icon: <SiDocker className="text-3xl text-blue-400" />,
+      description: "Containerizing applications to ensure consistent and efficient deployment environments.",
+      bgColor: "bg-blue-400/10",
+      hoverBg: "group-hover:bg-blue-400/20"
+    },
+    {
+      name: "OpenShift",
+      icon: <SiRedhatopenshift className="text-3xl text-red-600" />,
+      description: "Managing enterprise Kubernetes applications for high-scale container orchestration.",
+      bgColor: "bg-red-600/10",
+      hoverBg: "group-hover:bg-red-600/20"
+    },
+    {
+      name: "Git",
+      icon: <SiGit className="text-3xl text-orange-600" />,
+      description: "Utilizing version control systems for efficient team collaboration and code management.",
+      bgColor: "bg-orange-600/10",
+      hoverBg: "group-hover:bg-orange-600/20"
+    },
+    // {
+    //   name: "Azure",
+    //   icon: <SiMicrosoftazure className="text-3xl text-blue-500" />,
+    //   description: "Deploying and managing cloud-based applications and services using Microsoft Azure.",
+    //   bgColor: "bg-blue-500/10",
+    //   hoverBg: "group-hover:bg-blue-500/20"
+    // }
   ];
 
   return (
@@ -52,11 +128,11 @@ const Skills = () => {
         <h2 className="text-4xl font-bold mb-4">Skills & Technologies</h2>
         <p className="text-gray-400 max-w-2xl mx-auto">I work with modern tools and technologies to build fast, scalable and efficient web applications.</p>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <div key={index} className="glass-card p-8 rounded-2xl flex flex-col items-center text-center group">
             <div className={`w-16 h-16 mb-6 flex items-center justify-center rounded-xl transition ${skill.bgColor} ${skill.hoverBg}`}>
-              <img alt={skill.name} className="w-10 h-10" src={skill.icon} />
+              {skill.icon}
             </div>
             <h4 className="text-xl font-bold mb-3">{skill.name}</h4>
             <p className="text-gray-400 text-sm">{skill.description}</p>

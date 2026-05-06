@@ -5,14 +5,15 @@ const About = () => {
     <section className="py-24 px-6 bg-[#090c10]" id="about">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative group max-w-md w-full">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-20 blur-xl group-hover:opacity-40 transition"></div>
             <img 
               alt="About Portrait" 
-              className="w-full h-auto rounded-3xl relative z-10 filter grayscale hover:grayscale-0 transition duration-500 shadow-2xl" 
-              src="/anwar.png" 
+              className="w-full h-auto relative z-10 transition duration-500 transform group-hover:scale-[1.02] shadow-2xl" 
+              src="/my-cartoon-style-pic.png" 
             />
           </div>
+        </div>
         </div>
         <div className="w-full md:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold">About Me</h2>
@@ -23,8 +24,8 @@ const About = () => {
             Along with strong problem-solving skills, I follow clean architecture principles and modern development patterns. I'm passionate about writing maintainable code, improving UI/UX flows, and building applications that feel fast, secure, and intuitive. I actively explore new tools in the MERN ecosystem to stay updated and keep improving my development workflow.
           </p>
           <div className="pt-4">
-            <a 
-              href="/anwar_cv.pdf" 
+            <a
+              href="/anwar_cv.pdf"
               download="Anwar_Hossain_CV.pdf"
               className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-medium transition flex items-center gap-2 w-fit"
             >

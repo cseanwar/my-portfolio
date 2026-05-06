@@ -10,25 +10,25 @@ const Timeline = () => {
             <span className="w-8 h-1 bg-blue-500 rounded-full"></span> Education
           </h3>
           <div className="space-y-12 border-l border-white/10 ml-4 pl-8">
-            <TimelineItem 
-              year="2016 - 2018" 
-              institution="College Name" 
-              title="HSC-" 
-              description="Intrinsically enhance efficient communities whereas magnetic products. Proactively." 
+            <TimelineItem
+              year="2025 - Present:"
+              institution="TUC Sweden"
+              title="Yrkeshögskolan (YH)"
+              description="Two-year distance learning YH education with physical meetings in Jönköping. I trained in web development with a focus on HTML, CSS, JavaScript and C#, as well as design, UX and publishing tools. The education includes 400 YH credits and included 25 weeks of LIA internship in the workplace. I am now ready for a career as a web developer."
               color="blue"
             />
-            <TimelineItem 
-              year="2018 - 2022" 
-              institution="University Name" 
-              title="Bachelor's degree" 
-              description="Quickly strategize real-time innovation rather than customer directed." 
+            <TimelineItem
+              year="2026-Present:"
+              institution="Programming Hero"
+              title="Complete Web Development Bootcamp"
+              description="I completed an intensive web development program at Programming Hero, where I built over 45 projects and learned HTML, CSS, JavaScript, React, and the MERN stack. The course combined hands-on projects with conceptual sessions, preparing me for a career as a full-stack web developer."
               color="blue"
             />
-            <TimelineItem 
-              year="2022 - 2023" 
-              institution="University Name" 
-              title="Masters degree" 
-              description="Interactively reconceptualize compelling leadership skills for magnetic content." 
+            <TimelineItem
+              year="2001 - 2006:"
+              institution="Daffodil International University"
+              title="B.Sc in Computer Science Engineering"
+              description="This bachelor's program covers both theoretical aspects and practical constructions of hardware, software and networks. Programming languages ​​(C/C++, Java, Python), MS SQL, Oracle, network protocols and basic hardware design."
               color="blue"
             />
           </div>
@@ -40,27 +40,14 @@ const Timeline = () => {
             <span className="w-8 h-1 bg-purple-500 rounded-full"></span> Experience
           </h3>
           <div className="space-y-12 border-l border-white/10 ml-4 pl-8">
-            <TimelineItem 
-              year="2023 - Present" 
-              institution="" 
-              title="Senior Designer" 
-              description="Dynamically communicate mission-critical supply chains after client-based human." 
+
+            {/* <TimelineItem
+              year="2011 - Present:"
+              institution="Pressen Morgontjänst KB (PREMO)"
+              title="Newspaper Distributor"
+              description="Distribute newspapers and packages to subscribers"
               color="purple"
-            />
-            <TimelineItem 
-              year="2021 - Web Code" 
-              institution="" 
-              title="Lead ui/ux designer" 
-              description="Holistically create excellent web-readiness and prospective strategic theme." 
-              color="purple"
-            />
-            <TimelineItem 
-              year="2018 - CodeCoder" 
-              institution="" 
-              title="UI & UX Designer" 
-              description="Design teams enjoy user experience/UI/UX design as a process to marketing." 
-              color="purple"
-            />
+            /> */}
           </div>
         </div>
       </div>

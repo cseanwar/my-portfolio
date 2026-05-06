@@ -7,11 +7,6 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata = {
-  title: "Nur Adnan | MERN Stack Developer",
-  description: "Portfolio of Nur Adnan, a MERN Stack Web Developer specializing in stunning and efficient websites.",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>

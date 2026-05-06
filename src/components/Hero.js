@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane, FaMouse, FaChevronDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
@@ -65,13 +65,28 @@ const Hero = () => {
               <FaPaperPlane className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
             <div className="flex gap-4 text-gray-400">
-              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+              <a
+                href="https://github.com/cseanwar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300"
+              >
                 <FaGithub size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+              <a
+                href="https://www.linkedin.com/in/anwar-hossain-a3095147"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300"
+              >
                 <FaLinkedin size={20} />
               </a>
-              <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300">
+              <a
+                href="https://x.com/cseanwar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300"
+              >
                 <FaTwitter size={20} />
               </a>
             </div>
@@ -84,7 +99,7 @@ const Hero = () => {
             {/* Orbiting Ring (Spinning Clockwise) */}
             <div className="absolute inset-0 border border-blue-500/10 rounded-full animate-[spin_30s_linear_infinite]"></div>
 
-            {/* Tech Icons Orbiting (Container Spins Clockwise) */}
+            {/* Tech Icons Orbiting */}
             <div className="absolute inset-0 flex items-center justify-center animate-[spin_30s_linear_infinite]">
               {techIcons.map((item, index) => {
                 const angle = index * (360 / techIcons.length);
@@ -102,7 +117,6 @@ const Hero = () => {
                       transform: 'translate(-50%, -50%)'
                     }}
                   >
-                    {/* Counter-rotate the inner div anti-clockwise to keep icon upright */}
                     <div className="w-12 h-12 md:w-16 md:h-16 p-3 bg-[#1e293b]/80 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl flex items-center justify-center z-20 animate-[spin-reverse_30s_linear_infinite]">
                       <img src={item.icon} alt={item.name} className="w-full h-full object-contain" />
                     </div>
@@ -126,6 +140,19 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle,_transparent_40%,_#0b0e14_85%)] pointer-events-none"></div>
               </div>
             </div>
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-88 md:h-88 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
+              <div className="relative w-full h-full">
+                <img
+                  src="/anwar.png"
+                  alt="Anwar Hossain"
+                  className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
+                  onError={(e) => {
+                    e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
+                  }}
+                />
+                <div className="absolute inset-0 bg-[radial-gradient(circle,_transparent_40%,_#0b0e14_85%)] pointer-events-none"></div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>

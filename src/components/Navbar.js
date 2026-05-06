@@ -11,7 +11,7 @@ const Navbar = () => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    
+
     // Intersection Observer for active section tracking
     const observerOptions = {
       root: null,
@@ -103,7 +103,6 @@ const Navbar = () => {
               e.target.nextSibling.style.display = 'block';
             }}
           />
-          <span className="hidden text-white font-bold text-sm tracking-tighter">AH</span>
         </div>
 
         {/* Menu Items Group (Center Pill) */}
