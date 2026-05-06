@@ -140,19 +140,6 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle,_transparent_40%,_#0b0e14_85%)] pointer-events-none"></div>
               </div>
             </div>
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-88 md:h-88 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
-              <div className="relative w-full h-full">
-                <img
-                  src="/anwar.png"
-                  alt="Anwar Hossain"
-                  className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
-                  onError={(e) => {
-                    e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
-                  }}
-                />
-                <div className="absolute inset-0 bg-[radial-gradient(circle,_transparent_40%,_#0b0e14_85%)] pointer-events-none"></div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
