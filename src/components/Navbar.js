@@ -7,7 +7,9 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTabletOrAbove, setIsTabletOrAbove] = useState(false);
+  const [tabletMoreOpen, setTabletMoreOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const tabletMoreRef = useRef(null);
 
   // Track viewport width to show/hide theme toggle
   useEffect(() => {
@@ -61,10 +63,26 @@ const Navbar = () => {
 
   // Close mobile menu on scroll
   useEffect(() => {
-    const handleScroll = () => setMobileMenuOpen(false);
+    const handleScroll = () => {
+      setMobileMenuOpen(false);
+      setTabletMoreOpen(false);
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close tablet more dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (tabletMoreRef.current && !tabletMoreRef.current.contains(e.target)) {
+        setTabletMoreOpen(false);
+      }
+    };
+    if (tabletMoreOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [tabletMoreOpen]);
 
   const toggleTheme = (e) => {
     e.preventDefault();
@@ -154,8 +172,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-3 sm:px-6" ref={mobileMenuRef}>
-      <nav className="bg-[var(--nav-bg)] backdrop-blur-xl flex items-center justify-between py-2 px-2 sm:px-3">
+    <div className="fixed top-1 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-3 sm:px-6" ref={mobileMenuRef}>
+      <nav className="bg-[var(--nav-bg)] backdrop-blur-xl flex items-center justify-between py-2 px-2 sm:px-3 md:px-4 rounded-2xl border border-[var(--border-color)] shadow-lg">
 
         {/* Logo — always visible on all devices */}
         <div className="flex items-center flex-shrink-0 justify-center">
@@ -212,21 +230,91 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ── TABLET menu (md, condensed icon pills) ── */}
-        <div className="hidden md:flex lg:hidden items-center gap-1 px-1 border border-[var(--border-color)] rounded-full py-1 bg-white/5 mx-2">
-          {menuItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.href}
-              title={item.label}
-              className={`flex items-center justify-center p-2.5 rounded-full transition-all duration-300
-                ${activeSection === item.id
-                  ? 'bg-white/10 text-blue-400 shadow-inner'
-                  : 'text-gray-500 hover:text-[var(--foreground)] hover:bg-white/5'}`}
+        {/* ── TABLET menu (md → lg): icon + short label pill + More dropdown ── */}
+        <div className="hidden md:flex lg:hidden items-center gap-0.5 px-1.5 border border-[var(--border-color)] rounded-full py-1 bg-white/5 mx-3 shadow-lg">
+          {menuItems.filter(item => item.id !== 'contact').map((item) => {
+            const shortLabel = item.label === 'Qualifications' ? 'Quals'
+              : item.label === 'Tech Stack' ? 'Stack'
+                : item.label;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                title={item.label}
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap
+                  ${activeSection === item.id
+                    ? 'bg-white/10 text-[var(--foreground)] shadow-inner'
+                    : 'text-gray-400 hover:text-[var(--foreground)] hover:bg-white/5'}`}
+              >
+                <span className={activeSection === item.id ? 'text-blue-400' : 'text-gray-500'}>
+                  {item.icon}
+                </span>
+                {shortLabel}
+              </a>
+            );
+          })}
+
+          {/* More dropdown for tablet — click-based, includes Contact + extra items */}
+          <div className="relative" ref={tabletMoreRef}>
+            <button
+              onClick={() => setTabletMoreOpen((v) => !v)}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium text-gray-400 hover:text-[var(--foreground)] hover:bg-white/5 transition-all whitespace-nowrap"
             >
-              {item.icon}
-            </a>
-          ))}
+              <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+              </svg>
+              More
+              <svg
+                className={`w-3 h-3 text-gray-600 transition-transform duration-200 ${tabletMoreOpen ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+              </svg>
+            </button>
+
+            {/* Dropdown panel */}
+            {tabletMoreOpen && (
+              <div className="absolute top-full right-0 mt-3 w-52 bg-[var(--background)] backdrop-blur-2xl border border-[var(--border-color)] rounded-2xl shadow-2xl overflow-hidden z-[60]">
+                <div className="p-2 space-y-1">
+                  {/* Contact Me */}
+                  {menuItems.filter(item => item.id === 'contact').map(item => (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      onClick={() => setTabletMoreOpen(false)}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm transition
+                        ${activeSection === item.id
+                          ? 'bg-white/10 text-[var(--foreground)]'
+                          : 'text-gray-400 hover:text-[var(--foreground)] hover:bg-white/10'}`}
+                    >
+                      <div className="rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white transition p-2">
+                        {item.icon}
+                      </div>
+                      {item.label}
+                    </a>
+                  ))}
+
+                  {/* Divider */}
+                  <div className="border-t border-[var(--border-color)] my-1" />
+
+                  {/* About Me & Services */}
+                  {extraItems.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setTabletMoreOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm text-gray-400 hover:text-[var(--foreground)] hover:bg-white/10 transition"
+                    >
+                      <div className={`rounded-lg bg-${item.color}-500/10 text-${item.color}-400 hover:bg-${item.color}-500 hover:text-white transition p-2`}>
+                        {item.icon}
+                      </div>
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Right side: theme toggle + mobile hamburger */}
