@@ -173,7 +173,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-1 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-3 sm:px-6" ref={mobileMenuRef}>
-      <nav className="bg-[var(--nav-bg)] backdrop-blur-xl flex items-center justify-between py-2 px-2 sm:px-3 md:px-4 rounded-2xl border border-[var(--border-color)] shadow-lg">
+      <nav className="bg-[var(--nav-bg)] backdrop-blur-xl flex items-center justify-between py-2 px-2 sm:px-3 md:px-4">
 
         {/* Logo — always visible on all devices */}
         <div className="flex items-center flex-shrink-0 justify-center">
