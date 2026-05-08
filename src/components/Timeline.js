@@ -78,7 +78,7 @@ const TimelineItem = ({ year, institution, title, description, color }) => {
   return (
     <div className="relative">
       {/* Timeline dot */}
-      <div className={`absolute -left-[29px] sm:-left-[41px] top-1 w-3 h-3 sm:w-4 sm:h-4 rounded-full flex-shrink-0 ${dotColor}`} />
+      <div className={`absolute -left-7.25 sm:-left-10.25 top-1 w-3 h-3 sm:w-4 sm:h-4 rounded-full shrink-0 ${dotColor}`} />
 
       <p className={`${textColor} text-xs sm:text-sm font-medium mb-1 leading-snug`}>
         {year} {institution}

@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Logo / Name */}
         <div className="text-center md:text-left">
           <a
-            className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent uppercase tracking-tighter"
+            className="text-lg sm:text-xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent uppercase tracking-tighter"
             href="#"
           >
             ANWAR HOSSAIN

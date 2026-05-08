@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 import React from 'react';
 
 const About = () => {
@@ -8,7 +10,7 @@ const About = () => {
         {/* Image — top on mobile/tablet, left on desktop */}
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative group w-56 sm:w-72 md:w-full max-w-sm md:max-w-md">
-            <img
+            <Image
               alt="About Portrait"
               className="w-full h-auto relative z-10 transition duration-500 transform group-hover:scale-[1.02] shadow-2xl rounded-2xl"
               src="/my-cartoon-style-pic.png"
