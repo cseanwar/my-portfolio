@@ -1,10 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Tile Max - Tiles Shop",
+      title: "TileMax — Tiles Shop Website",
       description: "A premium e-commerce platform for high-end tiles and ceramics, featuring a sleek modern design and seamless browsing experience.",
       image: "/projects/tiles-shop.png",
       tags: ["Next.js", "Tailwind CSS", "Better Auth", "E-Commerce"],
@@ -20,7 +22,7 @@ const Projects = () => {
       demo: "https://dragon-news-next-better-auth.vercel.app/"
     },
     {
-      title: "KeenKeeper",
+      title: "Friend Keeper",
       description: "A personal CRM designed to help you nurture and track meaningful connections with friends and family in your busy life.",
       image: "/projects/keen-keeper.png",
       tags: ["React", "Tailwind CSS", "React Router"],
@@ -28,7 +30,7 @@ const Projects = () => {
       demo: "https://friend-keen-keeper.vercel.app/"
     },
     {
-      title: "PixGen AI",
+      title: "PixGen — AI Image Generation Platform",
       description: "An innovative AI-powered image generation platform that transforms text prompts into stunning visual art pieces.",
       image: "/projects/pixgen.png",
       tags: ["Next.js", "Better Auth", "Tailwind CSS"],
@@ -36,7 +38,7 @@ const Projects = () => {
       demo: "https://pixgen-chi-pink.vercel.app/"
     },
     {
-      title: "BPL Dream 11",
+      title: "BPL Dream 11 — Fantasy Cricket Team Selector",
       description: "A fantasy cricket application for the Bangladesh Premier League, allowing users to build and manage their dream team.",
       image: "/projects/dream11.png",
       tags: ["React", "Context API", "Tailwind CSS"],
@@ -44,7 +46,7 @@ const Projects = () => {
       demo: "https://bpl-dream-11-by-react.netlify.app/"
     },
     {
-      title: "Book Vibe",
+      title: "Book Vibe — Book Discovery & Reading List App",
       description: "A platform for book lovers to discover, review, and organize their reading lists with a focus on intuitive user experience.",
       image: "/projects/book-vibe.png",
       tags: ["React", "Tailwind CSS", "Local Storage"],
@@ -76,11 +78,11 @@ const Projects = () => {
         <p className="text-gray-400">Here are some of the real-world projects I've built using the MERN stack.</p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 min-h-[600px]">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 min-h-150">
         {currentProjects.map((project, index) => (
           <div key={index} className="gradient-border rounded-3xl overflow-hidden group flex flex-col">
             <div className="p-4 bg-brand-dark">
-              <img alt={project.title} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
+              <Image alt={project.title} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-3">{project.title}</h3>
