@@ -22,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
+    // setTheme(savedTheme);
     document.documentElement.classList.toggle('dark', savedTheme === 'dark');
 
     const observerOptions = {
