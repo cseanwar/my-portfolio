@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 
 const Hero = () => {
   const roles = ["Web Developer", "Web Designer", "Problem Solver"];
@@ -59,7 +58,7 @@ const Hero = () => {
                       style={{ left: `${50 + x}%`, top: `${50 + y}%`, transform: 'translate(-50%, -50%)' }}
                     >
                       <div className="w-8 h-8 sm:w-10 sm:h-10 p-1.5 sm:p-2 bg-[#1e293b]/80 backdrop-blur-md rounded-xl border border-white/10 shadow-xl flex items-center justify-center animate-[spin-reverse_30s_linear_infinite]">
-                        <Image src={item.icon} alt={item.name} className="w-full h-full object-contain" />
+                        <img src={item.icon} alt={item.name} className="w-full h-full object-contain" />
                       </div>
                     </div>
                   );
@@ -69,7 +68,7 @@ const Hero = () => {
               {/* Portrait image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
                 <div className="relative w-full h-full">
-                  <Image
+                  <img
                     src="/anwar.png"
                     alt="Anwar Hossain"
                     className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
@@ -219,7 +218,7 @@ const Hero = () => {
                       style={{ left: `${50 + x}%`, top: `${50 + y}%`, transform: 'translate(-50%, -50%)' }}
                     >
                       <div className="w-12 h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 p-2.5 lg:p-3 bg-[#1e293b]/80 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl flex items-center justify-center z-20 animate-[spin-reverse_30s_linear_infinite]">
-                        <Image src={item.icon} alt={item.name} className="w-full h-full object-contain" />
+                        <img src={item.icon} alt={item.name} className="w-full h-full object-contain" />
                       </div>
                     </div>
                   );
@@ -229,7 +228,7 @@ const Hero = () => {
               {/* Portrait image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 lg:w-80 lg:h-80 xl:w-88 xl:h-88 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
                 <div className="relative w-full h-full">
-                  <Image
+                  <img
                     src="/anwar.png"
                     alt="Anwar Hossain"
                     className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"

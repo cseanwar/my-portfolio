@@ -1,10 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Wanderlust — Travel Booking Platform",
+      description: "A premium travel and destination discovery portal where users can explore featured locations, search by budget/duration, manage bookings, and view traveler reviews.",
+      image: "/projects/wonderlust.png",
+      tags: ["React", "Next.js", "Tailwind CSS", "User Auth"],
+      github: "https://github.com/cseanwar/wonderlust",
+      demo: "https://wonderlust-liart.vercel.app/"
+    },
     {
       title: "TileMax — Tiles Shop Website",
       description: "A premium e-commerce platform for high-end tiles and ceramics, featuring a sleek modern design and seamless browsing experience.",
@@ -30,6 +37,14 @@ const Projects = () => {
       demo: "https://friend-keen-keeper.vercel.app/"
     },
     {
+      title: "DigiTools — E-Commerce Gadget Store",
+      description: "An interactive, modern electronics and tech gadget buying catalog with real-time cart management, category filtering, and product specification grids.",
+      image: "/projects/digitools.png",
+      tags: ["React", "Tailwind CSS", "E-Commerce", "Context API"],
+      github: "https://github.com/cseanwar/assignment6-digitools",
+      demo: "https://assignment6-digitools-buying-website.netlify.app/"
+    },
+    {
       title: "PixGen — AI Image Generation Platform",
       description: "An innovative AI-powered image generation platform that transforms text prompts into stunning visual art pieces.",
       image: "/projects/pixgen.png",
@@ -52,6 +67,54 @@ const Projects = () => {
       tags: ["React", "Tailwind CSS", "Local Storage"],
       github: "https://github.com/cseanwar/book-vibe.git",
       demo: "https://book-vibe-beta.vercel.app/"
+    },
+    {
+      title: "Job Application Tracker",
+      description: "An intuitive job tracker dashboard that enables developers and job seekers to monitor application progress across Interview, Rejected, and Offer status with a responsive jobs board.",
+      image: "/projects/job-tracker.png",
+      tags: ["JavaScript", "DOM Manipulation", "CSS3", "Interactive Dashboard"],
+      github: "https://github.com/cseanwar/interactive-web-for-job-tracker",
+      demo: "https://interactive-web-for-job-tracker.netlify.app/"
+    },
+    {
+      title: "TechWave — Premium Podcast Landing Page",
+      description: "A sleek, responsive audio and technology podcast website showcasing episodes on AI, remote work productivity, and expert career roadmaps.",
+      image: "/projects/techwave.png",
+      tags: ["HTML5", "CSS Grid", "Flexbox", "Responsive Design"],
+      github: "https://github.com/cseanwar/responsive-wep-app",
+      demo: "https://responsive-wep-app.netlify.app/"
+    },
+    {
+      title: "GitHub Issue Tracker",
+      description: "A lightweight administrative portal designed to simulate GitHub issue logging, tracking, and status updates, secured with login credentials.",
+      image: "/projects/issue-tracker.png",
+      tags: ["React", "Tailwind CSS", "State Management", "Admin Dashboard"],
+      github: "https://github.com/cseanwar/project-for-github-issue-tracker",
+      demo: "https://project-for-github-issue-tracker.netlify.app/"
+    },
+    {
+      title: "Payoo — Mobile Financial Service App",
+      description: "A secure mobile wallet interface featuring cash-in, cash-out, send money, bill pay, and interactive transactions logging with custom PIN verification.",
+      image: "/projects/payoo.png",
+      tags: ["JavaScript", "Tailwind CSS", "DaisyUI", "MFS Portal"],
+      github: "https://github.com/cseanwar/payoo-app",
+      demo: "https://cseanwar.github.io/payoo-app/"
+    },
+    {
+      title: "English Janala — Language Learning Platform",
+      description: "An interactive, accessible e-learning application designed for Bengali speakers to master English grammar, vocabulary lessons, and FAQ pronunciation guides.",
+      image: "/projects/english-janala.png",
+      tags: ["HTML5", "Tailwind CSS", "Interactive Lessons", "EdTech"],
+      github: "https://github.com/cseanwar/project-english-janala",
+      demo: "https://cseanwar.github.io/project-english-janala/"
+    },
+    {
+      title: "Green Earth — Global Tree Plantation Campaign",
+      description: "An environmental awareness landing page and global reforestation store where users can choose trees to support climate action, track community impact, and plant trees.",
+      image: "/projects/green-earth.png",
+      tags: ["JavaScript", "CSS3", "Cart System", "Climate Tech"],
+      github: "https://github.com/cseanwar/project-green-earth",
+      demo: "https://cseanwar.github.io/project-green-earth/"
     }
   ];
 
@@ -82,7 +145,7 @@ const Projects = () => {
         {currentProjects.map((project, index) => (
           <div key={index} className="gradient-border rounded-3xl overflow-hidden group flex flex-col">
             <div className="p-4 bg-brand-dark">
-              <Image alt={project.title} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
+              <img alt={project.title} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-3">{project.title}</h3>
@@ -122,11 +185,10 @@ const Projects = () => {
         <button
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`px-4 py-2 rounded-lg border transition-all ${
-            currentPage === 1 
-              ? 'border-white/5 text-gray-600 cursor-not-allowed' 
+          className={`px-4 py-2 rounded-lg border transition-all ${currentPage === 1
+              ? 'border-white/5 text-gray-600 cursor-not-allowed'
               : 'border-white/10 text-white hover:bg-white/5 hover:border-blue-500'
-          }`}
+            }`}
         >
           Previous
         </button>
@@ -136,11 +198,10 @@ const Projects = () => {
             <button
               key={i}
               onClick={() => paginate(i + 1)}
-              className={`w-10 h-10 rounded-lg font-bold transition-all ${
-                currentPage === i + 1
+              className={`w-10 h-10 rounded-lg font-bold transition-all ${currentPage === i + 1
                   ? 'bg-blue-600 text-white'
                   : 'bg-white/5 text-gray-400 hover:bg-white/10 border border-white/5'
-              }`}
+                }`}
             >
               {i + 1}
             </button>
@@ -150,11 +211,10 @@ const Projects = () => {
         <button
           onClick={() => paginate(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className={`px-4 py-2 rounded-lg border transition-all ${
-            currentPage === totalPages 
-              ? 'border-white/5 text-gray-600 cursor-not-allowed' 
+          className={`px-4 py-2 rounded-lg border transition-all ${currentPage === totalPages
+              ? 'border-white/5 text-gray-600 cursor-not-allowed'
               : 'border-white/10 text-white hover:bg-white/5 hover:border-blue-500'
-          }`}
+            }`}
         >
           Next
         </button>
