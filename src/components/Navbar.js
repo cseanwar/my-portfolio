@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
@@ -177,11 +178,13 @@ const Navbar = () => {
 
         {/* Logo — always visible on all devices */}
         <div className="flex items-center shrink-0 justify-center">
-          <img
+          <Image
             alt="Anwar Hossain"
             className={`h-10 sm:h-12 md:h-14 w-auto object-contain transition-all ${theme === 'light' ? 'invert' : ''}`}
             src="/logo.png"
-            onError={(e) => { e.target.style.display = 'none'; }}
+            width={56}
+            height={56}
+            priority
           />
         </div>
 
