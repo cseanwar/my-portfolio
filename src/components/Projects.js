@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,7 @@ const Projects = () => {
       title: "Wanderlust — Travel Booking Platform",
       description: "A premium travel and destination discovery portal where users can explore featured locations, search by budget/duration, manage bookings, and view traveler reviews.",
       image: "/projects/wonderlust.png",
-      tags: ["React", "Next.js", "Tailwind CSS", "User Auth"],
+      tags: ["Next.js", "Tailwind CSS", "Better Auth", "MongoDB", "Node.js", "Express.js"],
       github: "https://github.com/cseanwar/wonderlust",
       demo: "https://wonderlust-liart.vercel.app/"
     },
@@ -16,7 +17,7 @@ const Projects = () => {
       title: "TileMax — Tiles Shop Website",
       description: "A premium e-commerce platform for high-end tiles and ceramics, featuring a sleek modern design and seamless browsing experience.",
       image: "/projects/tiles-shop.png",
-      tags: ["Next.js", "Tailwind CSS", "Better Auth", "E-Commerce"],
+      tags: ["Next.js", "Tailwind CSS", "Better Auth", "E-Commerce", "MongoDB"],
       github: "https://github.com/cseanwar/tiles-shop-website.git",
       demo: "https://tiles-shop-website.vercel.app/"
     },
@@ -40,7 +41,7 @@ const Projects = () => {
       title: "DigiTools — E-Commerce Gadget Store",
       description: "An interactive, modern electronics and tech gadget buying catalog with real-time cart management, category filtering, and product specification grids.",
       image: "/projects/digitools.png",
-      tags: ["React", "Tailwind CSS", "E-Commerce", "Context API"],
+      tags: ["React", "Tailwind CSS", "Context API"],
       github: "https://github.com/cseanwar/assignment6-digitools",
       demo: "https://assignment6-digitools-buying-website.netlify.app/"
     },
@@ -48,7 +49,7 @@ const Projects = () => {
       title: "PixGen — AI Image Generation Platform",
       description: "An innovative AI-powered image generation platform that transforms text prompts into stunning visual art pieces.",
       image: "/projects/pixgen.png",
-      tags: ["Next.js", "Better Auth", "Tailwind CSS"],
+      tags: ["Next.js", "Better Auth", "Tailwind CSS", "MongoDB", "Node.js"],
       github: "https://github.com/cseanwar/pixgen.git",
       demo: "https://pixgen-chi-pink.vercel.app/"
     },
@@ -64,7 +65,7 @@ const Projects = () => {
       title: "Book Vibe — Book Discovery & Reading List App",
       description: "A platform for book lovers to discover, review, and organize their reading lists with a focus on intuitive user experience.",
       image: "/projects/book-vibe.png",
-      tags: ["React", "Tailwind CSS", "Local Storage"],
+      tags: ["React", "Tailwind CSS", "Local Storage", "Context API"],
       github: "https://github.com/cseanwar/book-vibe.git",
       demo: "https://book-vibe-beta.vercel.app/"
     },
@@ -80,7 +81,7 @@ const Projects = () => {
       title: "TechWave — Premium Podcast Landing Page",
       description: "A sleek, responsive audio and technology podcast website showcasing episodes on AI, remote work productivity, and expert career roadmaps.",
       image: "/projects/techwave.png",
-      tags: ["HTML5", "CSS Grid", "Flexbox", "Responsive Design"],
+      tags: ["HTML5", "CSS3", "Responsive Design"],
       github: "https://github.com/cseanwar/responsive-wep-app",
       demo: "https://responsive-wep-app.netlify.app/"
     },
@@ -88,7 +89,7 @@ const Projects = () => {
       title: "GitHub Issue Tracker",
       description: "A lightweight administrative portal designed to simulate GitHub issue logging, tracking, and status updates, secured with login credentials.",
       image: "/projects/issue-tracker.png",
-      tags: ["React", "Tailwind CSS", "State Management", "Admin Dashboard"],
+      tags: ["React", "Tailwind CSS", "JavaScript(ES6+)"],
       github: "https://github.com/cseanwar/project-for-github-issue-tracker",
       demo: "https://project-for-github-issue-tracker.netlify.app/"
     },
@@ -96,7 +97,7 @@ const Projects = () => {
       title: "Payoo — Mobile Financial Service App",
       description: "A secure mobile wallet interface featuring cash-in, cash-out, send money, bill pay, and interactive transactions logging with custom PIN verification.",
       image: "/projects/payoo.png",
-      tags: ["JavaScript", "Tailwind CSS", "DaisyUI", "MFS Portal"],
+      tags: ["JavaScript", "Tailwind CSS", "DaisyUI"],
       github: "https://github.com/cseanwar/payoo-app",
       demo: "https://cseanwar.github.io/payoo-app/"
     },
@@ -104,7 +105,7 @@ const Projects = () => {
       title: "English Janala — Language Learning Platform",
       description: "An interactive, accessible e-learning application designed for Bengali speakers to master English grammar, vocabulary lessons, and FAQ pronunciation guides.",
       image: "/projects/english-janala.png",
-      tags: ["HTML5", "Tailwind CSS", "Interactive Lessons", "EdTech"],
+      tags: ["HTML5", "Tailwind CSS", "API Integration"],
       github: "https://github.com/cseanwar/project-english-janala",
       demo: "https://cseanwar.github.io/project-english-janala/"
     },
@@ -112,7 +113,7 @@ const Projects = () => {
       title: "Green Earth — Global Tree Plantation Campaign",
       description: "An environmental awareness landing page and global reforestation store where users can choose trees to support climate action, track community impact, and plant trees.",
       image: "/projects/green-earth.png",
-      tags: ["JavaScript", "CSS3", "Cart System", "Climate Tech"],
+      tags: ["JavaScript", "CSS3", "API Integration"],
       github: "https://github.com/cseanwar/project-green-earth",
       demo: "https://cseanwar.github.io/project-green-earth/"
     }
@@ -145,7 +146,7 @@ const Projects = () => {
         {currentProjects.map((project, index) => (
           <div key={index} className="gradient-border rounded-3xl overflow-hidden group flex flex-col">
             <div className="p-4 bg-brand-dark">
-              <img alt={project.title} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
+              <Image alt={project.title} width={400} height={192} className="w-full h-48 object-cover rounded-2xl group-hover:scale-[1.02] transition duration-500" src={project.image} />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="text-xl font-bold mb-3">{project.title}</h3>
