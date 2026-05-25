@@ -11,11 +11,10 @@ const About = () => {
           <div className="relative group w-56 sm:w-72 md:w-full max-w-sm md:max-w-md">
             <Image
               alt="About Portrait"
+              className="w-full h-auto relative z-10 transition duration-500 transform group-hover:scale-[1.02] shadow-2xl rounded-2xl"
               src="/my-cartoon-style-pic.png"
-              priority
-              fill
-              sizes="(max-width: 768px) 18rem, (max-width: 1024px) 20rem, 100%"
-              className="relative z-10 transition duration-500 transform group-hover:scale-[1.02] shadow-2xl rounded-2xl object-contain"
+              width={480}
+              height={640}
             />
           </div>
         </div>
