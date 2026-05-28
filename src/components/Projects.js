@@ -6,17 +6,25 @@ import Image from 'next/image';
 const Projects = () => {
   const projects = [
     {
+      title: "BookNPlay — Sports Facility Booking Platform",
+      description: "A premium, full-stack sports venue and court booking platform enabling users to seamlessly discover, reserve, and manage football turfs, badminton courts, swimming pools, and tennis courts with instant slot bookings.",
+      image: "/projects/BookNPlay.png",
+      tags: ["Next.js", "Tailwind CSS", "MongoDB", "Node.js", "Express.js", "Better Auth"],
+      github: "https://github.com/cseanwar/BookNPlay.git",
+      demo: "https://book-n-play.vercel.app/"
+    },
+    {
       title: "Wanderlust — Travel Booking Platform",
       description: "A premium travel and destination discovery portal where users can explore featured locations, search by budget/duration, manage bookings, and view traveler reviews.",
-      image: "/projects/wonderlust.png",
+      image: "/projects/wanderlust.png",
       tags: ["Next.js", "Tailwind CSS", "Better Auth", "MongoDB", "Node.js", "Express.js"],
-      github: "https://github.com/cseanwar/wonderlust",
+      github: "https://github.com/cseanwar/wonderlust.git",
       demo: "https://wonderlust-liart.vercel.app/"
     },
     {
       title: "TileMax — Tiles Shop Website",
       description: "A premium e-commerce platform for high-end tiles and ceramics, featuring a sleek modern design and seamless browsing experience.",
-      image: "/projects/tiles-shop.png",
+      image: "/projects/Tile-Max.png",
       tags: ["Next.js", "Tailwind CSS", "Better Auth", "E-Commerce", "MongoDB"],
       github: "https://github.com/cseanwar/tiles-shop-website.git",
       demo: "https://tiles-shop-website.vercel.app/"
@@ -38,11 +46,11 @@ const Projects = () => {
       demo: "https://friend-keen-keeper.vercel.app/"
     },
     {
-      title: "DigiTools — E-Commerce Gadget Store",
+      title: "DigiTools — Digital Tools Buying Website",
       description: "An interactive, modern electronics and tech gadget buying catalog with real-time cart management, category filtering, and product specification grids.",
       image: "/projects/digitools.png",
       tags: ["React", "Tailwind CSS", "Context API"],
-      github: "https://github.com/cseanwar/assignment6-digitools",
+      github: "https://github.com/cseanwar/assignment6-digitools.git",
       demo: "https://assignment6-digitools-buying-website.netlify.app/"
     },
     {
@@ -74,7 +82,7 @@ const Projects = () => {
       description: "An intuitive job tracker dashboard that enables developers and job seekers to monitor application progress across Interview, Rejected, and Offer status with a responsive jobs board.",
       image: "/projects/job-tracker.png",
       tags: ["JavaScript", "DOM Manipulation", "CSS3", "Interactive Dashboard"],
-      github: "https://github.com/cseanwar/interactive-web-for-job-tracker",
+      github: "https://github.com/cseanwar/assignment-4.git",
       demo: "https://interactive-web-for-job-tracker.netlify.app/"
     },
     {
@@ -82,7 +90,7 @@ const Projects = () => {
       description: "A sleek, responsive audio and technology podcast website showcasing episodes on AI, remote work productivity, and expert career roadmaps.",
       image: "/projects/techwave.png",
       tags: ["HTML5", "CSS3", "Responsive Design"],
-      github: "https://github.com/cseanwar/responsive-wep-app",
+      github: "https://github.com/cseanwar/assignment-2.git",
       demo: "https://responsive-wep-app.netlify.app/"
     },
     {
@@ -90,15 +98,15 @@ const Projects = () => {
       description: "A lightweight administrative portal designed to simulate GitHub issue logging, tracking, and status updates, secured with login credentials.",
       image: "/projects/issue-tracker.png",
       tags: ["React", "Tailwind CSS", "JavaScript(ES6+)"],
-      github: "https://github.com/cseanwar/project-for-github-issue-tracker",
+      github: "https://github.com/cseanwar/assignment-5.git",
       demo: "https://project-for-github-issue-tracker.netlify.app/"
     },
     {
-      title: "Payoo — Mobile Financial Service App",
+      title: "Payoo – Digital Wallet Simulation",
       description: "A secure mobile wallet interface featuring cash-in, cash-out, send money, bill pay, and interactive transactions logging with custom PIN verification.",
       image: "/projects/payoo.png",
       tags: ["JavaScript", "Tailwind CSS", "DaisyUI"],
-      github: "https://github.com/cseanwar/payoo-app",
+      github: "https://github.com/cseanwar/payoo-app.git",
       demo: "https://cseanwar.github.io/payoo-app/"
     },
     {
@@ -106,7 +114,7 @@ const Projects = () => {
       description: "An interactive, accessible e-learning application designed for Bengali speakers to master English grammar, vocabulary lessons, and FAQ pronunciation guides.",
       image: "/projects/english-janala.png",
       tags: ["HTML5", "Tailwind CSS", "API Integration"],
-      github: "https://github.com/cseanwar/project-english-janala",
+      github: "https://github.com/cseanwar/project-english-janala.git",
       demo: "https://cseanwar.github.io/project-english-janala/"
     },
     {
@@ -114,7 +122,7 @@ const Projects = () => {
       description: "An environmental awareness landing page and global reforestation store where users can choose trees to support climate action, track community impact, and plant trees.",
       image: "/projects/green-earth.png",
       tags: ["JavaScript", "CSS3", "API Integration"],
-      github: "https://github.com/cseanwar/project-green-earth",
+      github: "https://github.com/cseanwar/project-green-earth.git",
       demo: "https://cseanwar.github.io/project-green-earth/"
     }
   ];
