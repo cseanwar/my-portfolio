@@ -10,7 +10,7 @@ const Projects = () => {
       description: "A modern digital library platform for seamless file sharing, uploading, and downloading of academic resources. Features user authentication, file previews, and a clean, responsive UI.",
       image: "/projects/BiblioDrop.png",
       tags: ["Next.js", "Tailwind CSS", "MongoDB", "Node.js", "Express.js", "File Sharing"],
-      github: "https://github.com/cseanwar/bibliodrop-client-two",
+      github: "https://github.com/cseanwar/bibliodrop-client.git",
       demo: "https://bibliodrop-client-two.vercel.app/"
     },
     {
