@@ -152,7 +152,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-[#090c10]" id="projects">
+    <section className="py-24 px-6 bg-[var(--background)]" id="projects">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Recent Projects</h2>
         <p className="text-gray-400">Here are some of the real-world projects I've built using the MERN stack.</p>

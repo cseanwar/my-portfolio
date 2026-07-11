@@ -30,7 +30,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 px-6" id="services">
+    <section className="py-24 px-6 bg-[var(--background)]" id="services">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Services I can Provide</h2>
         <p className="text-gray-400 max-w-2xl mx-auto">I offer design and development services focused on building fast, modern, and user-friendly digital experiences.</p>

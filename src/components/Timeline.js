@@ -2,11 +2,11 @@ import React from 'react';
 
 const Timeline = () => {
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" id="qualifications">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-[var(--background)]" id="qualifications">
       <div className="max-w-7xl mx-auto">
 
         {/* Section heading — mobile only, centered above both columns */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 md:hidden text-white">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 md:hidden text-[var(--foreground)]">
           Qualifications
         </h2>
 
@@ -14,11 +14,11 @@ const Timeline = () => {
 
           {/* Education Column */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 md:mb-12 flex items-center gap-3 text-white">
+            <h3 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 md:mb-12 flex items-center gap-3 text-[var(--foreground)]">
               <span className="w-6 sm:w-8 h-1 bg-blue-500 rounded-full"></span>
               Education
             </h3>
-            <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8">
+            <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8 text-sm sm:text-base text-gray-400 leading-relaxed">
               <TimelineItem
                 year="2025 - Present:"
                 institution="TUC Sweden"
@@ -45,7 +45,7 @@ const Timeline = () => {
 
           {/* Experience Column */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 md:mb-12 flex items-center gap-3 text-white">
+            <h3 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 md:mb-12 flex items-center gap-3 text-[var(--foreground)]">
               <span className="w-6 sm:w-8 h-1 bg-purple-500 rounded-full"></span>
               Experience
             </h3>
@@ -58,7 +58,7 @@ const Timeline = () => {
                 description="Distribute newspapers and packages to subscribers"
                 color="purple"
               /> */}
-              <p className="text-gray-500 text-sm italic">No experience listed yet.</p>
+              <p className="text-[var(--muted-foreground)] text-sm italic">No experience listed yet.</p>
             </div>
           </div>
 
@@ -83,10 +83,10 @@ const TimelineItem = ({ year, institution, title, description, color }) => {
       <p className={`${textColor} text-xs sm:text-sm font-medium mb-1 leading-snug`}>
         {year} {institution}
       </p>
-      <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2 text-white leading-snug">
+      <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2 text-[var(--foreground)] leading-snug">
         {title}
       </h4>
-      <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+      <p className="text-[var(--muted-foreground)] text-xs sm:text-sm leading-relaxed">
         {description}
       </p>
     </div>

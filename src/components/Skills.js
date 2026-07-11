@@ -126,7 +126,7 @@ const Skills = () => {
 
       {/* Section heading */}
       <div className="max-w-7xl mx-auto text-center mb-10 sm:mb-12 md:mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-white">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-[var(--foreground)]">
           Skills & Technologies
         </h2>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
@@ -153,7 +153,7 @@ const Skills = () => {
             </div>
 
             {/* Skill name */}
-            <h4 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-white">
+            <h4 className="text-sm sm:text-base md:text-xl font-bold mb-1.5 sm:mb-2 md:mb-3 text-[var(--foreground)]">
               {skill.name}
             </h4>
 

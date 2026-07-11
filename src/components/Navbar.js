@@ -4,7 +4,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(null);
+  const [theme, setTheme] = useState(() => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('theme') || 'dark';
+  }
+  return 'dark';
+});
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isTabletOrAbove, setIsTabletOrAbove] = useState(false);
@@ -21,10 +26,11 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
+  useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '-30% 0px -30% 0px',
@@ -88,10 +94,7 @@ const Navbar = () => {
   const toggleTheme = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   if (!theme) return null;

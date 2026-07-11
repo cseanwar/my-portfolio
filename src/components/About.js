@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-[#090c10]" id="about">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-[var(--background)]" id="about">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 sm:gap-12 md:gap-16">
 
         {/* Image — top on mobile/tablet, left on desktop */}
@@ -21,7 +21,7 @@ const About = () => {
 
         {/* Text content */}
         <div className="w-full md:w-1/2 space-y-4 sm:space-y-5 md:space-y-6 text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)]">About Me</h2>
 
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
             I am a MERN Stack Web Developer focusing on building production-ready applications! I enjoy designing APIs, creating interactive user interfaces, and optimizing performance to deliver smooth and efficient user experiences.

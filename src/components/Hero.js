@@ -26,9 +26,12 @@ const Hero = () => {
   ];
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       id="home"
-      className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 relative overflow-hidden flex items-center bg-[#0b0e14]"
+      className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 relative overflow-hidden flex items-center bg-[var(--background)]"
     >
       {/* Glow Effects */}
       <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-blue-600/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
@@ -86,7 +89,7 @@ const Hero = () => {
           <div className="space-y-4 sm:space-y-5 text-center w-full max-w-lg mx-auto px-2">
             <p className="text-base sm:text-lg font-medium text-blue-400">Hey, I'm</p>
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--foreground)]">
               Anwar Hossain
               <span className="inline-block animate-bounce ml-2">👋</span>
             </h1>
@@ -146,7 +149,7 @@ const Hero = () => {
           <div className="space-y-5 lg:space-y-6">
             <p className="text-lg font-medium text-blue-400">Hey, I'm</p>
 
-            <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+            <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--foreground)]">
               Anwar Hossain
               <span className="inline-block animate-bounce ml-2">👋</span>
             </h1>
@@ -243,7 +246,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 px-6 relative" id="contact">
+    <section className="py-24 px-6 relative bg-[var(--background)]" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-2">Get in Touch</h2>
@@ -93,15 +93,15 @@ const Contact = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="relative">
                 <label className="block text-xs font-semibold text-gray-500 uppercase mb-2">Name</label>
-                <input name="name" required className="w-full bg-brand-dark/50 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Insert your Name" type="text" />
+                <input name="name" required className="w-full bg-brand-dark/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Insert your Name" type="text" />
               </div>
               <div className="relative">
                 <label className="block text-xs font-semibold text-gray-500 uppercase mb-2">Email</label>
-                <input name="email" required className="w-full bg-brand-dark/50 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Insert your email" type="email" />
+                <input name="email" required className="w-full bg-brand-dark/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Insert your email" type="email" />
               </div>
               <div className="relative">
                 <label className="block text-xs font-semibold text-gray-500 uppercase mb-2">Project</label>
-                <textarea name="message" required className="w-full bg-brand-dark/50 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Write your project" rows="6"></textarea>
+                <textarea name="message" required className="w-full bg-brand-dark/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Write your project" rows="6"></textarea>
               </div>
 
               <button
