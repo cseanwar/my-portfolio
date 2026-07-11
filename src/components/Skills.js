@@ -12,6 +12,7 @@ import {
   SiDocker,
   SiRedhatopenshift,
   SiGit,
+  SiTypescript,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -82,6 +83,13 @@ const Skills = () => {
       description: "Creating clean, well-structured page layouts with semantic markup for better SEO.",
       bgColor: "bg-orange-500/10",
       hoverBg: "group-hover:bg-orange-500/20"
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript className="text-2xl sm:text-3xl text-blue-600" />,
+      description: "Writing type-safe code for better maintainability and fewer runtime errors.",
+      bgColor: "bg-blue-600/10",
+      hoverBg: "group-hover:bg-blue-600/20"   
     },
     {
       name: "MySQL",
