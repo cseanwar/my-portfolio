@@ -6,6 +6,14 @@ import Image from 'next/image';
 const Projects = () => {
   const projects = [
     {
+      title: "BiblioDrop — Digital Library File Sharing",
+      description: "A modern digital library platform for seamless file sharing, uploading, and downloading of academic resources. Features user authentication, file previews, and a clean, responsive UI.",
+      image: "/projects/BiblioDrop.png",
+      tags: ["Next.js", "Tailwind CSS", "MongoDB", "Node.js", "Express.js", "File Sharing"],
+      github: "https://github.com/cseanwar/bibliodrop-client-two",
+      demo: "https://bibliodrop-client-two.vercel.app/"
+    },
+    {
       title: "BookNPlay — Sports Facility Booking Platform",
       description: "A premium, full-stack sports venue and court booking platform enabling users to seamlessly discover, reserve, and manage football turfs, badminton courts, swimming pools, and tennis courts with instant slot bookings.",
       image: "/projects/BookNPlay.png",
