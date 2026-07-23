@@ -73,7 +73,7 @@ const Hero = () => {
                 <div className="relative w-full h-full">
                   <img
                     src="/my-professional-pic.png"
-                    alt="Anwar Hossain"
+                    alt="Anwar Hossain's professional picture"
                     className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
                     onError={(e) => {
                       e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
@@ -232,8 +232,8 @@ const Hero = () => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 lg:w-80 lg:h-80 xl:w-88 xl:h-88 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
                 <div className="relative w-full h-full">
                   <img
-                    src="/anwar.png"
-                    alt="Anwar Hossain"
+                    src="/my-professional-pic.png "
+                    alt="Anwar Hossain's professional picture"
                     className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
                     onError={(e) => {
                       e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
