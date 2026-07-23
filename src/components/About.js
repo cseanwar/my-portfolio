@@ -32,8 +32,8 @@ const About = () => {
 
           <div className="pt-2 sm:pt-4 flex justify-center md:justify-start">
             <a
-              href="/Anwar_Hossain_Resume.pdf"
-              download="Anwar_Hossain_Resume.pdf"
+              href="/Resume of Anwar Hossain.pdf"
+              download="Resume of Anwar Hossain.pdf"
               className="bg-blue-600 hover:bg-blue-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-medium transition flex items-center gap-2 w-fit text-sm sm:text-base"
             >
               Download Resume
