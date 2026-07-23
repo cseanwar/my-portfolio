@@ -31,7 +31,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 min-h-[500px]">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         {currentProjects.map((project) => (
           <div
             key={project.id}
@@ -51,15 +51,15 @@ const Projects = () => {
             </div>
 
             {/* Project Info & Action */}
-            <div className="p-6 flex flex-col flex-1 justify-between bg-white/5 backdrop-blur-sm">
-              <h3 className="text-xl font-bold text-[var(--foreground)] mb-6 group-hover:text-blue-400 transition-colors line-clamp-2 min-h-[3.5rem] flex items-center">
+            <div className="p-5 flex flex-col flex-1 justify-between bg-white/5 backdrop-blur-sm">
+              <h3 className="text-lg font-bold text-[var(--foreground)] mb-4 group-hover:text-blue-400 transition-colors line-clamp-2 min-h-[3rem] flex items-center">
                 {project.title}
               </h3>
 
-              <div className="mt-auto">
+              <div className="mt-2">
                 <Link
                   href={`/projects/${project.id}`}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 text-sm cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 text-sm cursor-pointer"
                 >
                   <span>View Details</span>
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
