@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [theme, setTheme] = useState(() => {
@@ -101,7 +102,7 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      label: 'Home', id: 'home', href: '#home',
+      label: 'Home', id: 'home', href: '/#home',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -109,7 +110,7 @@ const Navbar = () => {
       ),
     },
     {
-      label: 'Tech Stack', id: 'skills', href: '#skills',
+      label: 'Tech Stack', id: 'skills', href: '/#skills',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -117,7 +118,7 @@ const Navbar = () => {
       ),
     },
     {
-      label: 'Qualifications', id: 'qualifications', href: '#qualifications',
+      label: 'Qualifications', id: 'qualifications', href: '/#qualifications',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M12 14l9-5-9-5-9 5 9 5z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -127,7 +128,7 @@ const Navbar = () => {
       ),
     },
     {
-      label: 'Projects', id: 'projects', href: '#projects',
+      label: 'Projects', id: 'projects', href: '/#projects',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -135,7 +136,7 @@ const Navbar = () => {
       ),
     },
     {
-      label: 'Contact Me', id: 'contact', href: '#contact',
+      label: 'Contact Me', id: 'contact', href: '/#contact',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -146,7 +147,7 @@ const Navbar = () => {
 
   const extraItems = [
     {
-      label: 'About Me', href: '#about',
+      label: 'About Me', href: '/#about',
       color: 'purple',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,7 +156,7 @@ const Navbar = () => {
       ),
     },
     {
-      label: 'Services', href: '#services',
+      label: 'Services', href: '/#services',
       color: 'blue',
       icon: (
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,7 +181,7 @@ const Navbar = () => {
       <nav className="bg-(--nav-bg) backdrop-blur-xl flex items-center justify-between py-2 px-2 sm:px-3 md:px-4">
 
         {/* Logo — always visible on all devices */}
-        <div className="flex items-center shrink-0 justify-center">
+        <Link href="/" className="flex items-center shrink-0 justify-center">
           <Image
             alt="Anwar Hossain"
             className={`h-10 sm:h-12 md:h-14 w-auto object-contain transition-all ${theme === 'light' ? 'invert' : ''}`}
@@ -189,7 +190,7 @@ const Navbar = () => {
             height={56}
             priority
           />
-        </div>
+        </Link>
 
         {/* ── DESKTOP menu (lg+) ── */}
         <div className="hidden lg:flex items-center gap-1 px-1 border border-(--border-color) rounded-full py-1 shadow-xl bg-white/5 mx-4">
