@@ -72,7 +72,7 @@ const Hero = () => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl z-10 bg-[#0b0e14]">
                 <div className="relative w-full h-full">
                   <img
-                    src="/Anwar_Hossain.png"
+                    src="/my-professional-pic.png"
                     alt="Anwar Hossain"
                     className="w-full h-full object-cover object-top brightness-[0.85] contrast-[1.1]"
                     onError={(e) => {
