@@ -1,5 +1,43 @@
 export const projectsData = [
   {
+    id: "taskflow",
+    title: "TaskFlow Pro — A Full-Stack Project Management & Team Collaboration System",
+    description: "A premium, full-stack project management & team collaboration system where users can create projects, assign tasks, and track progress.",
+    image: "/projects/TaskFlow-pro.png",
+    tags: ["Next.js", "Tailwind CSS", "Better Auth", "Express.js", "MongoDB", "TypeScript", "Redux Toolkit", "Framer Motion"],
+    github: "https://github.com/cseanwar/taskflow-pro.git",
+    demo: "https://taskflow-pro-ruddy.vercel.app/",
+    challenges: [
+      "Implementing real-time updates for team member statuses and project timelines using polling with Redux Toolkit.",
+      "Building a centralized dashboard for project managers to view all team projects, track progress, and manage deadlines efficiently.",
+      "Designing a modern, responsive user interface with smooth animations and interactions using Framer Motion.",
+    ],
+    futurePlans: [
+      "Implement an AI-powered task suggestion engine that recommends optimal task assignments based on team member skills, availability, and past performance.",
+      "Ensure data security and user privacy through proper authentication and authorization mechanisms using Better Auth.",
+      "Implement a robust error handling and fallback system for a reliable user experience.",
+    ]
+  },
+  {
+    id: "crowdfund",
+    title: "Crowdfund — Crowdfunding Platform",
+    description: "A premium, full-stack crowdfunding platform where users can create campaigns, pledge support, and track progress. Features a sleek modern design and seamless browsing experience.",
+    image: "/projects/Crowdfund.png",
+    tags: ["Next.js", "Tailwind CSS", "Better Auth", "Express.js", "MongoDB", "JavaScript", "Framer Motion"],
+    github: "https://github.com/cseanwar/crowdfunding-platform-client.git",
+    demo: "https://crowdfunding-platform-client.vercel.app/",
+    challenges: [
+      "Implementing secure payment gateway integration for seamless crowdfunding and fund disbursement.",
+      "Designing a dynamic project dashboard that visualizes campaign progress, funding milestones, and donor analytics.",
+      "Building a robust content management system for campaign creation, approval workflows, and user interactions."
+    ],
+    futurePlans: [
+      "Multi-currency and global payment support",
+      "Social/community layer — campaign updates & discussions",
+      "AI-driven project recommendations based on user interests and funding patterns.",
+    ]
+  },
+  {
     id: "bibliodrop",
     title: "BiblioDrop — Digital Library File Sharing",
     description: "A modern digital library platform for seamless file sharing, uploading, and downloading of academic resources. Features user authentication, file previews, and a clean, responsive UI.",
@@ -114,25 +152,6 @@ export const projectsData = [
     ]
   },
   {
-    id: "digitools",
-    title: "DigiTools — Digital Tools Buying Website",
-    description: "An interactive, modern electronics and tech gadget buying catalog with real-time cart management, category filtering, and product specification grids.",
-    image: "/projects/digitools.png",
-    tags: ["React", "Tailwind CSS", "Context API"],
-    github: "https://github.com/cseanwar/assignment6-digitools.git",
-    demo: "https://assignment6-digitools-buying-website.netlify.app/",
-    challenges: [
-      "Managing dynamic shopping cart state across sibling components using React Context API.",
-      "Building custom modal product detail popups with live spec comparison tags.",
-      "Implementing local storage state synchronization to persist cart items across browser reloads."
-    ],
-    futurePlans: [
-      "Implement dynamic tech spec comparison table to compare up to 4 devices side-by-side.",
-      "Add real-time price trend alerts and coupon promo code integration at checkout.",
-      "Integrate customer rating reviews and video product demonstration embeds."
-    ]
-  },
-  {
     id: "pixgen",
     title: "PixGen — AI Image Generation Platform",
     description: "An innovative AI-powered image generation platform that transforms text prompts into stunning visual art pieces.",
@@ -171,25 +190,6 @@ export const projectsData = [
     ]
   },
   {
-    id: "book-vibe",
-    title: "Book Vibe — Book Discovery & Reading List App",
-    description: "A platform for book lovers to discover, review, and organize their reading lists with a focus on intuitive user experience.",
-    image: "/projects/book-vibe.png",
-    tags: ["React", "Tailwind CSS", "Local Storage", "Context API"],
-    github: "https://github.com/cseanwar/book-vibe.git",
-    demo: "https://book-vibe-beta.vercel.app/",
-    challenges: [
-      "Managing distinct list categories (Read List vs. Wishlist) without data duplication.",
-      "Creating custom page sorting algorithms (by page count, rating, publication year).",
-      "Structuring responsive tabbed UI navigation for seamless list toggling."
-    ],
-    futurePlans: [
-      "Integrate Google Books API for auto-completing search queries and fetching rich metadata.",
-      "Add annual reading target progress bars and reading speed statistics.",
-      "Implement book recommendation engine based on user ratings."
-    ]
-  },
-  {
     id: "job-tracker",
     title: "Job Application Tracker",
     description: "An intuitive job tracker dashboard that enables developers and job seekers to monitor application progress across Interview, Rejected, and Offer status with a responsive jobs board.",
@@ -206,25 +206,6 @@ export const projectsData = [
       "Migrate state model to React/Next.js with MongoDB backend database integration.",
       "Add interview schedule calendar views and follow-up email reminder templates.",
       "Implement resume attachment storage and salary progression graphs."
-    ]
-  },
-  {
-    id: "techwave",
-    title: "TechWave — Premium Podcast Landing Page",
-    description: "A sleek, responsive audio and technology podcast website showcasing episodes on AI, remote work productivity, and expert career roadmaps.",
-    image: "/projects/techwave.png",
-    tags: ["HTML5", "CSS3", "Responsive Design"],
-    github: "https://github.com/cseanwar/assignment-2.git",
-    demo: "https://responsive-wep-app.netlify.app/",
-    challenges: [
-      "Crafting pixel-perfect CSS Flexbox and Grid layouts compatible across legacy mobile browsers.",
-      "Designing customized HTML5 media player skins for episode previews.",
-      "Optimizing typography contrast and micro-interactions without relying on heavy external libraries."
-    ],
-    futurePlans: [
-      "Add interactive audio player with playlist queuing, playback speed controls, and timestamped transcripts.",
-      "Integrate RSS feed ingestion to automatically pull latest published episodes.",
-      "Implement podcast newsletter subscription integration."
     ]
   },
   {
@@ -247,25 +228,6 @@ export const projectsData = [
     ]
   },
   {
-    id: "payoo",
-    title: "Payoo – Digital Wallet Simulation",
-    description: "A secure mobile wallet interface featuring cash-in, cash-out, send money, bill pay, and interactive transactions logging with custom PIN verification.",
-    image: "/projects/payoo.png",
-    tags: ["JavaScript", "Tailwind CSS", "DaisyUI"],
-    github: "https://github.com/cseanwar/payoo-app.git",
-    demo: "https://cseanwar.github.io/payoo-app/",
-    challenges: [
-      "Implementing strict input validation and numeric PIN verification before updating wallet balance.",
-      "Designing a realistic mobile-first financial portal UI using DaisyUI components.",
-      "Generating dynamic timestamped transaction history entries for every financial action."
-    ],
-    futurePlans: [
-      "Add multi-currency conversion support and peer-to-peer QR code scanning simulation.",
-      "Implement spending category analytics charts (Bills, Transfers, Cashout).",
-      "Add biometric mock login option for mobile web view."
-    ]
-  },
-  {
     id: "english-janala",
     title: "English Janala — Language Learning Platform",
     description: "An interactive, accessible e-learning application designed for Bengali speakers to master English grammar, vocabulary lessons, and FAQ pronunciation guides.",
@@ -282,25 +244,6 @@ export const projectsData = [
       "Integrate speech recognition web API for real-time user pronunciation evaluation.",
       "Add gamified lesson progression badges and daily streak trackers.",
       "Implement interactive vocabulary flashcards with spaced repetition scheduling."
-    ]
-  },
-  {
-    id: "green-earth",
-    title: "Green Earth — Global Tree Plantation Campaign",
-    description: "An environmental awareness landing page and global reforestation store where users can choose trees to support climate action, track community impact, and plant trees.",
-    image: "/projects/green-earth.png",
-    tags: ["JavaScript", "CSS3", "API Integration"],
-    github: "https://github.com/cseanwar/project-green-earth.git",
-    demo: "https://cseanwar.github.io/project-green-earth/",
-    challenges: [
-      "Designing vibrant, nature-themed visuals and responsive grid landing page sections.",
-      "Building interactive tree counter metrics with animated counters on scroll.",
-      "Structuring modal donation popups with smooth payment option toggles."
-    ],
-    futurePlans: [
-      "Integrate live satellite map overlays showing active reforestation project sites globally.",
-      "Add individual carbon footprint calculator tool.",
-      "Implement certificate of planting PDF generator for tree donors."
     ]
   }
 ];
