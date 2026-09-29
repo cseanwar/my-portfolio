@@ -20,17 +20,17 @@ const Timeline = () => {
             </h3>
             <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8 text-sm sm:text-base text-gray-400 leading-relaxed">
               <TimelineItem
-                year="2025 - Present:"
-                institution="TUC Sweden"
-                title="Yrkeshögskolan (YH)"
-                description="Two-year distance learning YH education with physical meetings in Jönköping. I trained in web development with a focus on HTML, CSS, JavaScript and C#, as well as design, UX and publishing tools. The education includes 400 YH credits and included 25 weeks of LIA internship in the workplace. I am now ready for a career as a web developer."
-                color="blue"
-              />
-              <TimelineItem
-                year="2026 - Present:"
+                year="2026:"
                 institution="Programming Hero"
                 title="Complete Web Development Bootcamp"
                 description="I completed an intensive web development program at Programming Hero, where I built over 45 projects and learned HTML, CSS, JavaScript, React, and the MERN stack. The course combined hands-on projects with conceptual sessions, preparing me for a career as a full-stack web developer."
+                color="blue"
+              />
+              <TimelineItem
+                year="2021 - 2023:"
+                institution="Edugrade"
+                title="Linux DevOps Engineer"
+                description="I have learned about various tools of DevOps using Linux operating system. For example, Ansible, Gitlab, VMware, Python programming, Bash script, MySQL, Docker, Docker Swarm, Agile Methodology, and so on."
                 color="blue"
               />
               <TimelineItem
@@ -51,14 +51,21 @@ const Timeline = () => {
             </h3>
             <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8">
               {/* Placeholder when no experience items */}
-              {/* <TimelineItem
-                year="2011 - Present:"
-                institution="Pressen Morgontjänst KB (PREMO)"
-                title="Newspaper Distributor"
-                description="Distribute newspapers and packages to subscribers"
+              <TimelineItem
+                year="2026 - Present:"
+                institution="Birger AB"
+                title="Fullstack Developer Intern"
+                description="Birger AB is a Swedish company who provides technology solutions to other businesses. I will be working on real-world projects, applying classroom concepts to real-world infrastructure challenges. I will also gain hands-on experience to frontend and backend development."
                 color="purple"
-              /> */}
-              <p className="text-[var(--muted-foreground)] text-sm italic">No experience listed yet.</p>
+              />
+              <TimelineItem
+                year="2022 - 2023:"
+                institution="Stockholm University"
+                title="DevOps Engineer Intern"
+                description="This role allowed me to work on actual production environments, applying classroom concepts to real-world infrastructure challenges. I gained hands-on exposure to automated deployment pipelines, container orchestration, and monitoring tools, significantly enhancing my problem-solving and system administration skills."
+                color="purple"
+              />
+              {/* <p className="text-[var(--muted-foreground)] text-sm italic">No experience listed yet.</p> */}
             </div>
           </div>
 
