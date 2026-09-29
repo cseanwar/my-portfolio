@@ -16,6 +16,9 @@ const Footer = () => {
           >
             ANWAR HOSSAIN
           </a>
+          <p className="text-xs text-gray-500 text-center sm:text-left">
+            Junior Fullstack Developer
+          </p>
         </div>
 
         {/* Nav links — wraps on very small screens */}
