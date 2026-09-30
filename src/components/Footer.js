@@ -14,11 +14,11 @@ const Footer = () => {
             className="text-lg sm:text-xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent uppercase tracking-tighter"
             href="#"
           >
-            ANWAR HOSSAIN
-          </a>
-          <p className="text-xs text-gray-500 text-center sm:text-left">
             Junior Fullstack Developer
-          </p>
+          </a>
+          {/* <p className="text-xs text-gray-500 text-center sm:text-left">
+            Junior Fullstack Developer
+          </p> */}
         </div>
 
         {/* Nav links — wraps on very small screens */}
