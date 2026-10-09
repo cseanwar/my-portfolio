@@ -49,7 +49,7 @@ const Timeline = () => {
               <span className="w-6 sm:w-8 h-1 bg-purple-500 rounded-full"></span>
               Experience
             </h3>
-            <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8">
+            <div className="space-y-8 sm:space-y-10 md:space-y-12 border-l border-white/10 ml-3 sm:ml-4 pl-5 sm:pl-8 text-base text-gray-400 leading-relaxed">
               {/* Placeholder when no experience items */}
               <TimelineItem
                 year="2026 - Present:"
