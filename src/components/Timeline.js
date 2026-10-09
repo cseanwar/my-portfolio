@@ -59,6 +59,13 @@ const Timeline = () => {
                 color="purple"
               />
               <TimelineItem
+                year="2026"
+                institution="Unilever Sweden"
+                title="On-site Engineer"
+                description="Installation/configuration/patching of applications/Windows operating system. Management of Windows client images. Distribution of security patches. Install, configure, and patch applications and Windows operating systems using Microsoft System Center Configuration Manager (SCCM). Prepare and configure new laptops/workstations and Windows upgrades via Configuration Manager. Prepare images for distribution and hardware certification."
+                color="purple"
+              />
+              <TimelineItem
                 year="2022 - 2023:"
                 institution="Stockholm University"
                 title="DevOps Engineer Intern"
